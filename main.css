@@ -1,0 +1,223 @@
+/* *{
+    /* margin:0;
+    padding:0; */
+    /* box-sizing: border-box; */
+/* } */
+
+header {
+    padding:16px;
+    background-color: rgb(0, 0, 0);
+    color: #FFF;
+}
+
+h1 {
+    padding: 16px 0;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input, button {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 12pt;
+
+}
+
+button {
+    background-color: #000000;
+    border: none;
+    padding: 6px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    color:#FFF;
+}
+
+input {
+    padding: 6px;
+    border-radius: 8px;
+    border-style:hidden;
+}
+
+ul li, .produto {
+    list-style: none;
+    font-family: "Titillium Web", sans-serif;
+
+}
+
+ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFF;
+}
+
+#outlet {
+    color: crimson;
+}
+
+.menu li {
+    float:left;
+    padding: 0 8px;
+    font-size: 16pt;
+}
+
+.clear {
+    clear:both;
+}
+
+.produtos {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.produtos h2 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 2em;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.produto{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 49.5%);
+    column-gap: 1%;
+    row-gap: 1%;
+}
+
+.produtos button:hover{
+    background-color: #272727;
+}
+
+.produtos img:hover{
+    background-color: #2727274b;
+    cursor: pointer;
+}
+
+#tenis:hover {
+    content: url(./Imagens/tenis-preto-02.png);
+}
+
+#jaqueta:hover {
+    content: url(./Imagens/moletom-02.png)
+}
+
+#mochila:hover {
+    content: url(./Imagens/mochila-02.png)
+}
+
+#top:hover {
+    content: url(./Imagens/top-02.png)
+}
+
+footer {
+    background-color: #000000;
+    color: #FFF;
+    font-family: "Titillium Web", sans-serif;
+    padding: 4em;
+}
+
+footer > p {
+    text-align: center;
+    padding: 2em;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+}
+
+.footer #icons {
+    cursor: pointer;
+}
+
+footer img {
+    max-width: 40px;
+}
+
+
+/*Layout Desktop (a partir de 1024px): 
+Layout Tablet (de 641px até 1023px):
+Layout Mobile (até 640px):*/
+
+@media(max-width: 1023px){
+    header .container {
+        display: block;
+        text-align: center;
+    }
+
+    header input {
+        margin-top: 1em;
+    }
+
+    .menu li {
+        float:none;
+        font-size: 14pt;
+    }
+
+    .produtos h2 {
+        padding: 30px 0;
+    }
+
+    .produto img {
+        max-width: 300px;
+    }
+
+    .lancamentos h3 {
+        padding: 8px 0
+    }
+
+}
+
+
+@media (max-width: 640px){
+    header .container {
+        display: block;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    header input {
+        margin-top: 1em;
+    }
+
+    header h1 {
+        padding: 10px;
+    }
+
+    .menu li {
+        float:none;
+        font-size: 14pt;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 99%);
+        column-gap: 1%;
+        row-gap: 1%;
+        margin-bottom: 4em;
+    }
+
+    .produtos h2 {
+        padding: 30px 0;
+    }
+
+    .lancamentos h3 {
+        padding: 8px 0
+    }
+}
+
