@@ -16,7 +16,7 @@ h1 {
     font-weight: 500;
 }
 
-.container {
+.container, .container-flex {
     display: flex;
     max-width: 1024px;
     width: 100%;
@@ -72,13 +72,29 @@ ul li a {
     clear:both;
 }
 
+#fachada {
+    max-width: 500px;
+    margin-right: 50px;
+}
+
+.sobre .container-flex p {
+    margin-left: 50px;
+    font-size: 14pt;
+}
+
+.sobre-a-moove {
+    display: block;
+    flex-direction: row;
+    align-items: center;
+}
+
 .produtos {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
 }
 
-.produtos h2 {
+h2 {
     font-family: "Titillium Web", sans-serif;
     font-size: 2em;
     text-align: center;
@@ -90,10 +106,17 @@ ul li a {
     margin-bottom: 60px;
 }
 
+.produtos img {
+    max-width: 320px;
+}
+
+.lancamentos {
+    margin-bottom: 60px;
+}
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 49.5%);
+    grid-template-columns: repeat(4, 24.75%);
     column-gap: 1%;
     row-gap: 1%;
 }
@@ -170,7 +193,7 @@ Layout Mobile (até 640px):*/
     }
 
     .produtos h2 {
-        padding: 30px 0;
+        padding: 50px 0;
     }
 
     .produto img {
@@ -179,6 +202,30 @@ Layout Mobile (até 640px):*/
 
     .lancamentos h3 {
         padding: 8px 0
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 49.5%);
+        column-gap: 1%;
+        row-gap: 1%;
+    }
+
+    .sobre-a-moove .container-flex {
+        display: block;
+        max-width: 600px;
+        align-items: center;
+    }
+
+    #fachada {
+        max-width: 600px;
+        margin-right: 0px;
+    }
+    
+    .sobre .container-flex p {
+        margin-left: 0px;
+        font-size: 14pt;
+        margin-top: 50px;
     }
 
 }
@@ -213,11 +260,29 @@ Layout Mobile (até 640px):*/
     }
 
     .produtos h2 {
-        padding: 30px 0;
+        padding: 50px 0;
     }
 
     .lancamentos h3 {
         padding: 8px 0
+    }
+
+    .sobre-a-moove .container-flex {
+        display: block;
+        max-width: 350px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #fachada {
+        max-width: 350px;
+        margin-right: 0px;
+    }
+    
+    .sobre .container-flex p {
+        margin-left: 0px;
+        font-size: 12pt;
+        margin-top: 50px;
     }
 }
 
